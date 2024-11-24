@@ -1,0 +1,194 @@
+    body {
+        position: relative; /* Para permitir o uso de pseudo-elementos */
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    header.imagem {
+        background-color: rgba(3, 2, 0, 0.042); /* Cor de fundo com 50% de opacidade */
+        text-align: center;
+        padding: 2px 0; /* Adiciona um espaço ao redor do conteúdo */
+    }
+
+    .imagem img {
+        width: 100%; /* Ajusta a largura da imagem para 100% do seu contêiner */
+        max-width: 300px; /* Define um limite máximo para a largura da imagem */
+        height: auto; /* Mantém a proporção da imagem */
+        display: block; /* Remove o espaço em branco abaixo da imagem */
+        margin: 0 auto; /* Centraliza a imagem */
+    }
+
+
+    body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('img/OIP\ imagem\ de\ fundo.jpg'), linear-gradient(rgba(0, 0, 0, 0.199), rgba(0, 0, 0, 0.564)); /* Gradiente escuro */
+        background-size: cover;
+        background-position: center;
+        z-index: -4;
+    }
+    header {
+        
+        background-size: cover;
+        background-position: center;
+        color: rgb(255, 251, 251);
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    h1 {
+        margin: 0;
+        text-shadow: 1px 1px 2px rgba(4, 0, 0, 0.7); /* Sombra no texto para melhor legibilidade */
+    }
+
+    .container {
+        display: grid; /* Usar flexbox para alinhar os itens */
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-gap: 10px; /* Espaçamento entre os itens da grade */
+        justify-content: center;
+        align-items: flex-start; /* Centralizar verticalmente */
+        height: 100% auto ; /* Altura total da tela */
+        width: 100%;
+        max-width: 1200px;
+        padding: 20px; /* Espaçamento interno */
+        background-image: url('img/OIP\ imagem\ de\ fundo.jpg'), linear-gradient(rgba(0, 0, 0, 0.199), rgba(0, 0, 0, 0.564));
+    }
+
+    .services {
+        display: flex;
+        flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+        justify-content: center; /* Centraliza os itens */
+        gap: 20px; /* Espaçamento entre os itens */
+        width: 100%;
+    }
+
+    .service {
+        background-color: #ffd27133;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        flex: 1 1 250px; /* Permite que a div cresça e encolha, com largura mínima de 250px */
+        max-width: 300px; /* Limita a largura máxima da div do serviço */
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+
+    .service:hover {
+        transform: translateY(-5px); /* Levantar o cartão ao passar o mouse */
+        box-shadow: 0 8px 16px rgba(181, 8, 8, 0.2); /* Aumentar a sombra ao passar o mouse */
+    }
+
+    h2 {
+        margin: 0 0 20px; /* Margem do título */
+        font-size: 1.4em; /* Tamanho da fonte do título */
+    }
+
+    h3 {
+        background-color: white; /* Cor de fundo branca */
+        color: white; /* Cor do texto branca */
+    }
+    h3 {
+        background-color: rgba(0, 0, 255, 0); /* Cor de fundo azul */
+        color: white; /* Cor do texto branca */
+    }
+
+    p {
+        margin: 0; /* Remover margens do parágrafo */
+        font-size: 1em; /* Tamanho da fonte do parágrafo */
+        color: #fffcfcfe; /* Cor do texto do parágrafo */
+    }
+    .social-media {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .social-media a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #f96706; /* Cor dos links de redes sociais */
+        font-size: 24px;
+        transition: color 0.3s; /* Transição suave para a cor */
+    }
+
+    .social-media a:hover {
+        color: #0e2eff; /* Cor ao passar o mouse */
+    }
+
+    .footer {
+        text-align: center; /* Centraliza o texto e links */
+        padding: 15px; /* Adiciona um padding ao footer */
+        background-color: #12020282; /* Cor de fundo do footer */
+    }
+
+    .homem {
+        flex: 1px; /* Largura fixa para a imagem do homem (ajuste conforme necessário) */
+        height: fit-content; /* Altura automática para manter a proporção */
+        display: flex;
+        justify-content: center; /* Centralizar a imagem horizontalmente */
+        align-items: center; /* Centralizar a imagem verticalmente */
+    }
+
+    .homem img {
+        max-width: 100%; /* A imagem não excederá a largura do contêiner */
+        height: auto; /* Manter a proporção da imagem */
+        border-radius: 90px /* Bordas arredondadas na imagem */
+    }
+
+    .service {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service:hover {
+        transform: scale(1.05); /* Aumenta o tamanho do cartão ao passar o mouse */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+    }
+
+    .s8cred {
+        display: flex; /* Usar flexbox para centralizar */
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente, se necessário */
+        margin-top: 10px; /* Espaçamento acima, se necessário */
+    }
+
+    .s8cred img {
+        max-width: 30%; /* Ajuste o valor conforme necessário para reduzir o tamanho */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
+    /* Media Queries para dispositivos menores */
+    @media (max-width: 768px) {
+        .container {
+            padding: 10px;
+        }
+
+        .service {
+            padding: 15px;
+        }
+
+        .social-media a {
+            font-size: 20px;
+        }
+
+        .whatsapp-button a {
+            font-size: 16px;
+        }
+    
+    }
+
+    /* Media Queries para dispositivos menores */
+    @media (max-width: 768px) {
+        .service {
+            padding: 15px;
+            flex: 1 1 100%; /* Faz com que os serviços ocupem 100% da largura em telas menores */
+            max-width: none; /* Remove a largura máxima em telas menores */
+        }
+    }
